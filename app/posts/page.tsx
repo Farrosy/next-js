@@ -20,8 +20,10 @@ const Post = async() => {
   const posts: Iposts[] = await response.json()
   return (
     <div className={styles.bgRed}>
-      <h1>fetch data</h1>
-      <p>{new Date().toLocaleTimeString()}</p>
+      <div className="bg-[white]">
+        <h1>fetching data</h1>
+        <p>{new Date().toLocaleTimeString()}</p>
+      </div>
       <h1>Post Page</h1>
       {posts.map((post) => {
         return(
