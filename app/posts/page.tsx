@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import CardList from "../components/Posts/CardList"
 import ViewUserButton from "../components/Posts/ViewUserButton"
 import styles from "./postPage.module.css"
@@ -14,7 +15,7 @@ interface Iposts {
 
 const Post = async() => {
   const response = await fetch(base_url, {
-    cache: "no-store"
+    next: {revalidate:3600}
   })
   const posts: Iposts[] = await response.json()
   return (
