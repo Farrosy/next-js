@@ -1,6 +1,6 @@
 const Albums = () => {
   return (
-    <div>Albums Page</div>
+    <main>Albums Page</main>
   )
 }
 

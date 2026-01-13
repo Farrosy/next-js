@@ -20,7 +20,7 @@ const Post = async () => {
   })
   const posts: Iposts[] = await response.json()
   return (
-    <div className={styles.bgGrey}>
+    <main className={styles.bgGrey}>
       <div className="bg-[white]">
         <h1>fetching data</h1>
         <p>{new Date().toLocaleTimeString()}</p>
@@ -52,7 +52,7 @@ const Post = async () => {
       </CardList>
 
 
-    </div>
+    </main>
   )
 }
 
