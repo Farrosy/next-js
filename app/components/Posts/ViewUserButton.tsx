@@ -1,11 +1,11 @@
 "use client"
 
 interface ViewUserButtonProps {
-  userId: number
+  id: number
 }
 
-const ViewUserButton: React.FC<ViewUserButtonProps> = ({userId}) => {
-  const handleClick = () => alert(`user Id: ${userId} \n API: https://jsonplaceholder.typicode.com/posts for detail user ID`);
+const ViewUserButton: React.FC<ViewUserButtonProps> = ({id}) => {
+  const handleClick = () => alert(`ID: ${id}`);
   return (
     <button onClick={handleClick}>Lihat User</button>
   )

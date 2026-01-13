@@ -31,6 +31,7 @@ const Post = async () => {
         <thead className="bg-black">
           <tr>
             <th className="border p-2">ID</th>
+            <th className="border p-2">User ID</th>
             <th className="border p-2">Title</th>
             <th className="border p-2">Body</th>
             <th className="border p-2">Action</th>
@@ -40,11 +41,12 @@ const Post = async () => {
           {posts.map((post) => (
             <tr key={post.id}>
               <td className="border p-2 text-center">{post.id}</td>
+              <td className="border p-2 text-center">{post.userId}</td>
               <td className="border">
                   <p className="font-bold">{post.title}</p>
               </td>
               <td className="border p-2">{post.body}</td>
-              <td className="border p-2"><ViewUserButton userId={post.userId} /> </td>
+              <td className="border p-2"><ViewUserButton id={post.id} /> </td>
             </tr>
           ))}
         </tbody>
